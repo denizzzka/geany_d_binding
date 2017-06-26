@@ -1,22 +1,24 @@
 import geany_plugin_d_api;
-import std.stdio: writeln;
+//~ import std.stdio: writeln;
 
 extern(System):
 
 gboolean hello_init(GeanyPlugin *plugin, gpointer pdata)
 {
-    writeln("Hello World from D plugin!\n");
+    //~ writeln("Hello World from D plugin!\n");
     /* Perform advanced set up here */
     return true;
 }
 
 void hello_cleanup(GeanyPlugin *plugin, gpointer pdata)
 {
-    writeln("Bye, World!\n");
+    //~ writeln("Bye, World!\n");
 }
 
 export void geany_load_module(GeanyPlugin *plugin)
 {
+    _init_consts();
+
     /* Step 1: Set metadata */
     plugin.info.name = "D HelloWorld";
     plugin.info.description = "D plugin example";
@@ -32,9 +34,4 @@ export void geany_load_module(GeanyPlugin *plugin)
         return;
     /* alternatively:
     GEANY_PLUGIN_REGISTER_FULL(plugin, 225, data, free_func); */
-}
-
-void main()
-{
-	geany_load_module(null);
 }

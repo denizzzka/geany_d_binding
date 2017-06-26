@@ -10,17 +10,20 @@ alias gboolean = bool;
 alias gpointer = size_t*;
 
 enum GEANY_API_VERSION = 231;
-const ubyte GEANY_ABI_SHIFT;
-const int GEANY_ABI_VERSION;
+private ubyte GEANY_ABI_SHIFT; //FIXME: add const
+uint GEANY_ABI_VERSION = 71; //FIXME: add const
 
-static this()
+//~ shared static this() // FIXME
+void _init_consts()
 {
-    if(gtk_check_version(3, 0, 0))
-        GEANY_ABI_SHIFT = 8;
-    else
-        GEANY_ABI_SHIFT = 0;
+    //~ if(gtk_check_version(3, 0, 0))
+    //~ {
+        //~ GEANY_ABI_SHIFT = 8;
+    //~ }
+    //~ else
+        //~ GEANY_ABI_SHIFT = 0;
 
-    GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
+    //~ GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
 }
 
 extern(System) @nogc nothrow
@@ -84,7 +87,7 @@ extern(System) @nogc nothrow
     struct GeanyProxyFuncs;
     struct GeanyPluginPrivate;
 
-    //~ export void geany_load_module(GeanyPlugin* plugin);
+    export void geany_load_module(GeanyPlugin* plugin);
 
     gboolean geany_plugin_register(GeanyPlugin* plugin, gint api_version,
                                    gint min_api_version, gint abi_version);
