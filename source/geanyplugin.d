@@ -16,14 +16,12 @@ uint GEANY_ABI_VERSION = 71; //FIXME: add const
 //~ shared static this() // FIXME
 void _init_consts()
 {
-    //~ if(gtk_check_version(3, 0, 0))
-    //~ {
-        //~ GEANY_ABI_SHIFT = 8;
-    //~ }
-    //~ else
-        //~ GEANY_ABI_SHIFT = 0;
+    if(false /*gtk_check_version(3, 0, 0)*/)
+        GEANY_ABI_SHIFT = 8;
+    else
+        GEANY_ABI_SHIFT = 0;
 
-    //~ GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
+    GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
 }
 
 extern(System) @nogc nothrow
