@@ -1,14 +1,9 @@
 name "geany_plugin_d_api"
 description "Geany editor plugin API D binding"
-authors "Denis Feklushkin"
+authors "Denis Feklushkin <denis.feklushkin@gmail.com>"
 copyright "Copyright © 2017, Denis Feklushkin"
 license "GNU"
 targetType "sourceLibrary"
 dependency "gtk-d:gtkd" version="~>3.6.5"
 
-subPackage {
-	name "example"
-	targetType "library"
-	sourcePath "example"
-	dependency "geany_plugin_d_api" version="*"
-}
+subPackage "example"
