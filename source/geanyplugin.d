@@ -1,9 +1,10 @@
 module geany_plugin_d_api.geanyplugin;
 
 import gtkc.gobjecttypes: GCallback;
-import gtkc.gtktypes: GtkDialog, GtkWidget;
+import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 //~ import gtkc.gtktypes: gchar; //FIXME
 alias gchar = char;
+alias gint = int;
 alias gboolean = bool;
 alias gpointer = size_t*;
 
@@ -69,3 +70,10 @@ struct GeanyProxyFuncs;
 struct GeanyPluginPrivate;
 
 void geany_load_module(GeanyPlugin* plugin);
+
+gboolean geany_plugin_register(GeanyPlugin* plugin, gint api_version,
+                               gint min_api_version, gint abi_version);
+
+gboolean geany_plugin_register_full(GeanyPlugin* plugin, gint api_version,
+                                    gint min_api_version, gint abi_version,
+                                    gpointer data, GDestroyNotify free_func);
