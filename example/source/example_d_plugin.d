@@ -15,10 +15,8 @@ void hello_cleanup(GeanyPlugin *plugin, gpointer pdata)
     //~ writeln("Bye, World!\n");
 }
 
-export void geany_load_module(GeanyPlugin *plugin)
+void _geany_load_module(GeanyPlugin *plugin)
 {
-    _init_consts();
-
     /* Step 1: Set metadata */
     plugin.info.name = "D HelloWorld";
     plugin.info.description = "D plugin example";

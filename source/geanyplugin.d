@@ -10,11 +10,10 @@ alias gboolean = bool;
 alias gpointer = size_t*;
 
 enum GEANY_API_VERSION = 231;
-private ubyte GEANY_ABI_SHIFT; //FIXME: add const
-uint GEANY_ABI_VERSION = 71; //FIXME: add const
+private const ubyte GEANY_ABI_SHIFT;
+const uint GEANY_ABI_VERSION;
 
-//~ shared static this() // FIXME
-void _init_consts()
+shared static this()
 {
     if(false /*gtk_check_version(3, 0, 0)*/)
         GEANY_ABI_SHIFT = 8;
@@ -85,14 +84,23 @@ extern(System) @nogc nothrow
     struct GeanyProxyFuncs;
     struct GeanyPluginPrivate;
 
-    export void geany_load_module(GeanyPlugin* plugin);
-
     gboolean geany_plugin_register(GeanyPlugin* plugin, gint api_version,
                                    gint min_api_version, gint abi_version);
 
     gboolean geany_plugin_register_full(GeanyPlugin* plugin, gint api_version,
                                         gint min_api_version, gint abi_version,
                                         gpointer data, GDestroyNotify free_func);
+}
+
+/// Is need to implement it in the plugin code
+extern(System) void _geany_load_module(GeanyPlugin *plugin);
+
+extern(System) export void geany_load_module(GeanyPlugin *plugin)
+{
+    import core.runtime: Runtime;
+
+    Runtime.initialize();
+    _geany_load_module(plugin);
 }
 
 gboolean GEANY_PLUGIN_REGISTER(GeanyPlugin* plugin, gint min_api_version)
