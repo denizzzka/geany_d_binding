@@ -92,7 +92,7 @@ extern(System) @nogc nothrow
                                         gpointer data, GDestroyNotify free_func);
 }
 
-/// Is need to implement it in the plugin code
+/// It is need to implement it in the plugin code
 extern(System) void _geany_load_module(GeanyPlugin *plugin);
 
 extern(System) export void geany_load_module(GeanyPlugin *plugin)
