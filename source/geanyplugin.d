@@ -3,6 +3,7 @@ module geany_plugin_d_api.geanyplugin;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 import gtkc.gtk: gtk_check_version;
+import gtkc.glib: GModule;
 
 alias gchar = char;
 alias gint = int;
@@ -92,16 +93,24 @@ extern(System) @nogc nothrow
                                         gpointer data, GDestroyNotify free_func);
 }
 
-/// It is need to implement it in the plugin code
-extern(System) void _geany_load_module(GeanyPlugin *plugin);
-
-extern(System) export void geany_load_module(GeanyPlugin *plugin)
+extern(System) export const(gchar)* g_module_check_init(GModule* modul)
 {
     import core.runtime: Runtime;
 
-    Runtime.initialize();
-    _geany_load_module(plugin);
+    Runtime.initialize(); //TODO: result check
+
+    return null;
 }
+
+extern(System) export void g_module_unload(GModule* modul)
+{
+    import core.runtime: Runtime;
+
+    Runtime.terminate(); //TODO: result check
+}
+
+/// It is need to implement it in the plugin code
+extern(System) export void geany_load_module(GeanyPlugin *plugin);
 
 gboolean GEANY_PLUGIN_REGISTER(GeanyPlugin* plugin, gint min_api_version)
 {
