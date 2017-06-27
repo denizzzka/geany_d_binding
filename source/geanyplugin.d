@@ -2,7 +2,7 @@ module geany_plugin_d_api.geanyplugin;
 
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
-import gtkc.gtk: gtk_check_version;
+import gtk.Version;
 import gtkc.glib: GModule;
 
 alias gchar = char;
@@ -16,7 +16,7 @@ const uint GEANY_ABI_VERSION;
 
 shared static this()
 {
-    if(false /*gtk_check_version(3, 0, 0)*/)
+    if(Version.checkVersion(3, 0, 0) is null)
         GEANY_ABI_SHIFT = 8;
     else
         GEANY_ABI_SHIFT = 0;
