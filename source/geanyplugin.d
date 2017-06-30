@@ -1,14 +1,10 @@
 module geany_plugin_d_api.geanyplugin;
 
+import geany_plugin_d_api.types;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 import gtk.Version;
 import gtkc.glib: GModule;
-
-alias gchar = char;
-alias gint = int;
-alias gboolean = bool;
-alias gpointer = size_t*;
 
 enum GEANY_API_VERSION = 231;
 private const ubyte GEANY_ABI_SHIFT;
