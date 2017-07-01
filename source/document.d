@@ -31,7 +31,7 @@ struct GeanyDocument
     gchar           *encoding;
     /** Internally used flag to indicate whether the file of this document has a byte-order-mark. */
     gboolean         has_bom;
-    GeanyEditor *editor;    /**< The editor associated with the document. */
+    GeanyEditor     *editor;    /**< The editor associated with the document. */
     /** The filetype for this document, it's only a reference to one of the elements of the global
      *  filetypes array. */
     GeanyFiletype   *file_type;
