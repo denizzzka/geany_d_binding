@@ -6,4 +6,5 @@ alias guint = uint;
 alias gsize = size_t;
 alias gboolean = gint;
 alias gpointer = size_t*;
+alias gfloat = float;
 alias TMParserType = gint;
