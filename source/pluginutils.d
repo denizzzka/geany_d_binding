@@ -1,4 +1,4 @@
-module geany_plugin_d_api.pluginutils.d;
+module geany_plugin_d_api.pluginutils;
 
 import geany_plugin_d_api.geanyplugin: GeanyPlugin;
 import geany_plugin_d_api.types;
