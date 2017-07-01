@@ -4,7 +4,7 @@ import geany_plugin_d_api.types;
 import gdk.Gdk: GdkModifierType, GDestroyNotify;
 import gtk.Widget: GtkWidget;
 
-extern(System) @nogc nothrow:
+extern(System) nothrow:
 
 struct GeanyKeyGroup;
 
@@ -49,6 +49,8 @@ alias GeanyKeyBindingFunc = gboolean function(GeanyKeyBinding* key, guint key_id
 
 /** Function pointer type used for keybinding callbacks. */
 alias GeanyKeyCallback = void function(guint key_id);
+
+@nogc:
 
 GeanyKeyBinding* keybindings_set_item(
         GeanyKeyGroup* group,
