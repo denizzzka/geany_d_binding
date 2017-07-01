@@ -106,7 +106,7 @@ extern(System) export void g_module_unload(GModule* modul)
 }
 
 /// It is need to implement it in the plugin code
-extern(System) export void geany_load_module(GeanyPlugin *plugin);
+extern(System) export void geany_load_module(GeanyPlugin *plugin) nothrow;
 
 gboolean GEANY_PLUGIN_REGISTER(GeanyPlugin* plugin, gint min_api_version)
 {
