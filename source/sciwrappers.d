@@ -5,6 +5,11 @@ import geany_plugin_d_api.scintilla.ScintillaWidget;
 
 extern(System) nothrow @nogc:
 
+/** Gets the length of all text.
+ * @param sci Scintilla widget.
+ * @return Length. */
+gint sci_get_length(ScintillaObject* sci);
+
 /** Allocates and fills a buffer with text from the start of the document.
  * @param sci Scintilla widget.
  * @param buffer_len Buffer length to allocate, including the terminating
