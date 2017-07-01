@@ -8,6 +8,8 @@ import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 import gtk.Version;
 import gtkc.glib: GModule;
 
+extern(System) @nogc nothrow:
+
 /**
  *  Structure for representing an open tab with all its properties.
  **/
@@ -57,3 +59,10 @@ struct GeanyDocument
 
 struct GeanyEditor;
 struct GeanyDocumentPrivate;
+
+/**
+ *  Finds the current document.
+ *
+ *  @return @transfer{none} @nullable A pointer to the current document or @c NULL if there are no opened documents.
+ **/
+GeanyDocument* document_get_current();
