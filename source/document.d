@@ -2,6 +2,7 @@ module geany_plugin_d_api.document;
 
 import geany_plugin_d_api.types;
 import geany_plugin_d_api.filetypes;
+import geany_plugin_d_api.editor: GeanyEditor;
 
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
@@ -57,7 +58,6 @@ struct GeanyDocument
     GeanyDocumentPrivate* priv;  /* should be last, append fields before this item */
 }
 
-struct GeanyEditor;
 struct GeanyDocumentPrivate;
 
 /**
