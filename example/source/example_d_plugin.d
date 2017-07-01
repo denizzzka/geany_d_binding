@@ -1,4 +1,4 @@
-import geany_plugin_d_api;
+import geany_d_binding;
 //~ import std.stdio: writeln;
 
 extern(System):

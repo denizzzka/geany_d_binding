@@ -1,6 +1,6 @@
-module geany_plugin_d_api.scintilla.ScintillaWidget;
+module geany_d_binding.scintilla.ScintillaWidget;
 
-import geany_plugin_d_api.types;
+import geany_d_binding.types;
 import gtkc.gtktypes: GtkContainer;
 
 extern(System) @nogc nothrow:

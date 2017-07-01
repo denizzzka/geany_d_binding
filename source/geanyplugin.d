@@ -1,6 +1,6 @@
-module geany_plugin_d_api.geanyplugin;
+module geany_d_binding.geanyplugin;
 
-import geany_plugin_d_api.types;
+import geany_d_binding.types;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 import gtk.Version;

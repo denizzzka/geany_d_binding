@@ -1,8 +1,8 @@
-module geany_plugin_d_api.document;
+module geany_d_binding.document;
 
-import geany_plugin_d_api.types;
-import geany_plugin_d_api.filetypes;
-import geany_plugin_d_api.editor: GeanyEditor;
+import geany_d_binding.types;
+import geany_d_binding.filetypes;
+import geany_d_binding.editor: GeanyEditor;
 
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;

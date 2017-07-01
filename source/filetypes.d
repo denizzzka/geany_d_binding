@@ -1,6 +1,6 @@
-module geany_plugin_d_api.filetypes;
+module geany_d_binding.filetypes;
 
-import geany_plugin_d_api.types;
+import geany_d_binding.types;
 
 /** IDs of known filetypes
  *

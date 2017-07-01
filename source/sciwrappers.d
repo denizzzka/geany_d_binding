@@ -1,7 +1,7 @@
-module geany_plugin_d_api.sciwrappers;
+module geany_d_binding.sciwrappers;
 
-import geany_plugin_d_api.types;
-import geany_plugin_d_api.scintilla.ScintillaWidget;
+import geany_d_binding.types;
+import geany_d_binding.scintilla.ScintillaWidget;
 
 extern(System) nothrow @nogc:
 

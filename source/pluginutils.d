@@ -1,8 +1,8 @@
-module geany_plugin_d_api.pluginutils;
+module geany_d_binding.pluginutils;
 
-import geany_plugin_d_api.geanyplugin: GeanyPlugin;
-import geany_plugin_d_api.types;
-import geany_plugin_d_api.keybindings;
+import geany_d_binding.geanyplugin: GeanyPlugin;
+import geany_d_binding.types;
+import geany_d_binding.keybindings;
 
 extern(System) @nogc nothrow:
 

@@ -1,4 +1,4 @@
-module geany_plugin_d_api.types;
+module geany_d_binding.types;
 
 alias gchar = char;
 alias gint = int;

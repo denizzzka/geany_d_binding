@@ -1,6 +1,6 @@
-module geany_plugin_d_api.dialogs;
+module geany_d_binding.dialogs;
 
-import geany_plugin_d_api.types;
+import geany_d_binding.types;
 import gtkc.gtktypes: GtkMessageType;
 
 extern(System) nothrow @nogc:
