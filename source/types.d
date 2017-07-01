@@ -8,3 +8,16 @@ alias gboolean = gint;
 alias gpointer = size_t*;
 alias gfloat = float;
 alias TMParserType = gint;
+
+/// Wraps g_free to nothrow version
+void g_free(T)(T mem) nothrow
+{
+	import gtkc.glib: official_g_free = g_free;
+
+	try
+		official_g_free(mem);
+	catch(Exception)
+	{
+		assert(false);
+	}
+}
