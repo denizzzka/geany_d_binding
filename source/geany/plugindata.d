@@ -1,6 +1,6 @@
-module geany_d_binding.plugindata;
+module geany_d_binding.geany.plugindata;
 
-import geany_d_binding.types;
+import geany_d_binding.geany.types;
 import gtkc.gobjecttypes: GCallback;
 
 extern(System) @nogc nothrow:

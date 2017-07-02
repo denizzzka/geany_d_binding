@@ -1,4 +1,4 @@
-import geany_d_binding;
+import geany_d_binding.geany;
 //~ import std.stdio: writeln;
 
 extern(System):

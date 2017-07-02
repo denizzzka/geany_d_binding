@@ -1,6 +1,6 @@
-module geany_d_binding.sciwrappers;
+module geany_d_binding.geany.sciwrappers;
 
-import geany_d_binding.types;
+import geany_d_binding.geany.types;
 import geany_d_binding.scintilla.ScintillaWidget;
 
 extern(System) nothrow @nogc:

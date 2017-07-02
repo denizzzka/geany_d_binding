@@ -1,7 +1,7 @@
-module geany_d_binding.editor;
+module geany_d_binding.geany.editor;
 
-import geany_d_binding.types;
-import geany_d_binding.document;
+import geany_d_binding.geany.types;
+import geany_d_binding.geany.document;
 import geany_d_binding.scintilla.ScintillaWidget: ScintillaObject;
 
 extern(System) @nogc nothrow:

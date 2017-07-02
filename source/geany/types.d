@@ -1,4 +1,4 @@
-module geany_d_binding.types;
+module geany_d_binding.geany.types;
 
 alias gchar = char;
 alias gint = int;

@@ -1,6 +1,6 @@
-module geany_d_binding.keybindings;
+module geany_d_binding.geany.keybindings;
 
-import geany_d_binding.types;
+import geany_d_binding.geany.types;
 import gdk.Gdk: GdkModifierType, GDestroyNotify;
 import gtk.Widget: GtkWidget;
 
