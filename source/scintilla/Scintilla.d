@@ -22,7 +22,7 @@ struct SCNotification
 	/* SCN_HOTSPOTRELEASECLICK, SCN_INDICATORCLICK, SCN_INDICATORRELEASE, */
 
 	int modificationType;	/* SCN_MODIFIED */
-	const char *text;
+	const(char)*text;
 	/* SCN_MODIFIED, SCN_USERLISTSELECTION, SCN_AUTOCSELECTION, SCN_URIDROPPED */
 
 	Sci_Position length;		/* SCN_MODIFIED */
