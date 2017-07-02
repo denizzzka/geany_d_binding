@@ -68,8 +68,15 @@ enum Msg : uint
     SCN_AUTOCCOMPLETED = 2030
 }
 
-enum Sci : uint
+enum Sci
 {
     SCI_AUTOCSHOW = 2100,
-    SCI_USERLISTSHOW = 2117
+    SCI_USERLISTSHOW = 2117,
+    SCI_AUTOCSETORDER = 2660
+}
+
+/// Status Codes
+enum Sc
+{
+	SC_ORDER_PERFORMSORT
 }
