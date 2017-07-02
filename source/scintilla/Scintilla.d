@@ -80,5 +80,5 @@ enum Sci
 /// Status Codes
 enum Sc
 {
-	SC_ORDER_PERFORMSORT
+	SC_ORDER_PERFORMSORT = 1
 }
