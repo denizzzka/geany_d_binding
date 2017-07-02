@@ -57,6 +57,7 @@ struct Sci_NotifyHeader
 enum Msg : uint
 {
     SCN_CHARADDED = 2001,
+    SCN_SAVEPOINTREACHED = 2002,
     SCN_SAVEPOINTLEFT = 2003,
     SCN_KEY = 2005,
     SCN_UPDATEUI = 2007,
