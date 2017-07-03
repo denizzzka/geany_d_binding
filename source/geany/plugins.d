@@ -1,24 +1,10 @@
-module geany_d_binding.geany.geanyplugin;
+module geany_d_binding.geany.plugins;
 
 import geany_d_binding.geany.types;
+import geany_d_binding.geany.plugindata: GEANY_API_VERSION, GEANY_ABI_VERSION;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
-import gtk.Version;
 import gtkc.glib: GModule;
-
-enum GEANY_API_VERSION = 231;
-private const ubyte GEANY_ABI_SHIFT;
-const uint GEANY_ABI_VERSION;
-
-shared static this()
-{
-    if(Version.checkVersion(3, 0, 0) is null)
-        GEANY_ABI_SHIFT = 8;
-    else
-        GEANY_ABI_SHIFT = 0;
-
-    GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
-}
 
 extern(System) @nogc nothrow
 {

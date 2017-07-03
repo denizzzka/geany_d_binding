@@ -3,6 +3,22 @@ module geany_d_binding.geany.plugindata;
 import geany_d_binding.geany.types;
 import gtkc.gobjecttypes: GCallback;
 
+enum GEANY_API_VERSION = 231;
+private const ubyte GEANY_ABI_SHIFT;
+const uint GEANY_ABI_VERSION;
+
+shared static this()
+{
+    import gtk.Version;
+
+    if(Version.checkVersion(3, 0, 0) is null)
+        GEANY_ABI_SHIFT = 8;
+    else
+        GEANY_ABI_SHIFT = 0;
+
+    GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
+}
+
 extern(System) @nogc nothrow:
 
 /** Callback array entry type used with the @ref plugin_callbacks symbol. */

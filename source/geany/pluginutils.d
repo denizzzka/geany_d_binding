@@ -1,6 +1,6 @@
 module geany_d_binding.geany.pluginutils;
 
-import geany_d_binding.geany.geanyplugin: GeanyPlugin;
+import geany_d_binding.geany.plugins: GeanyPlugin;
 import geany_d_binding.geany.types;
 import geany_d_binding.geany.keybindings;
 
