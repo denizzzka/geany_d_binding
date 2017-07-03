@@ -3,19 +3,19 @@ import geany_d_binding.geany;
 
 extern(System):
 
-gboolean hello_init(GeanyPlugin *plugin, gpointer pdata)
+gboolean hello_init(GeanyPlugin* plugin, gpointer pdata)
 {
     //~ writeln("Hello World from D plugin!\n");
     /* Perform advanced set up here */
     return true;
 }
 
-void hello_cleanup(GeanyPlugin *plugin, gpointer pdata)
+void hello_cleanup(GeanyPlugin* plugin, gpointer pdata)
 {
     //~ writeln("Bye, World!\n");
 }
 
-void geany_load_module(GeanyPlugin *plugin)
+void geany_load_module(GeanyPlugin* plugin)
 {
     /* Step 1: Set metadata */
     plugin.info.name = "D HelloWorld";
