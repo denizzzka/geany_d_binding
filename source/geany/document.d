@@ -7,7 +7,7 @@ import geany_d_binding.geany.editor: GeanyEditor;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
 import gtk.Version;
-import gtkc.glib: GModule;
+import glib.c.types: GModule;
 
 extern(System) @nogc nothrow:
 

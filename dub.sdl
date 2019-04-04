@@ -4,6 +4,11 @@ authors "Denis Feklushkin <denis.feklushkin@gmail.com>"
 copyright "Copyright © 2017, Denis Feklushkin"
 license "GPL"
 targetType "sourceLibrary"
-dependency "gtk-d:gtkd" version="~>3.6.5"
+dependency "gtk-d:gtkd" version="~>3.8.5"
 
-subPackage "example"
+subPackage {
+    name "example"
+    sourcePaths "example/source"
+    targetType "dynamicLibrary"
+    dependency "geany_d_binding" version="*"
+}

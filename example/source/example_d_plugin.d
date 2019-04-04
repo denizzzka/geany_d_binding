@@ -1,4 +1,6 @@
-import geany_d_binding.geany;
+import geany_d_binding.geany.plugins;
+import geany_d_binding.geany.types;
+import glib.c.types: GModule;
 //~ import std.stdio: writeln;
 
 extern(System):

@@ -4,7 +4,7 @@ import geany_d_binding.geany.types;
 import geany_d_binding.geany.plugindata: GEANY_API_VERSION, GEANY_ABI_VERSION;
 import gtkc.gobjecttypes: GCallback;
 import gtkc.gtktypes: GtkDialog, GtkWidget, GDestroyNotify;
-import gtkc.glib: GModule;
+import glib.c.types: GModule;
 
 extern(System) @nogc nothrow
 {

@@ -1,3 +1,0 @@
-name "example"
-targetType "dynamicLibrary"
-dependency "geany_d_binding" version="*"
