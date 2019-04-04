@@ -16,7 +16,9 @@ shared static this()
     else
         GEANY_ABI_SHIFT = 0;
 
-    GEANY_ABI_VERSION = 71 << GEANY_ABI_SHIFT;
+    enum __abi_macroversion = 72;
+
+    GEANY_ABI_VERSION = __abi_macroversion << GEANY_ABI_SHIFT;
 }
 
 extern(System) @nogc nothrow:
